@@ -1,0 +1,43 @@
+{
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vite-coffee.umd.js",
+  "module": "./dist/vite-coffee.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vite-coffee.es.js",
+      "require": "./dist/vite-coffee.umd.js"
+    }
+  },
+  "types": "./dist/types/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@koiyakiya"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/koiyakiya/vite-coffee"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vue-tsc --emitDeclarationOnly && mv dist/src dist/types",
+    "preserve": "vite build",
+    "serve": "vite preview --port 5050",
+    "typecheck": "vue-tsc --noEmit",
+    "preview": "vite preview",
+    "test": "exit 0"
+  },
+  "name": "@koiyakiya/vite-coffee",
+  "version": "0.0.0",
+  "type": "module",
+  "dependencies": {
+    "vue": "^3.4.33"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.11",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.4",
+    "vue-tsc": "^2.0.28"
+  }
+}

@@ -1,0 +1,1 @@
+export { default as Kofi } from "./components/Kofi.vue";
