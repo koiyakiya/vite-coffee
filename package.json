@@ -12,7 +12,7 @@
   },
   "types": "./dist/types/index.d.ts",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@koiyakiya"
+    "registry": "https://registry.npmjs.org/koiyakiya"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
     "preview": "vite preview",
     "test": "exit 0"
   },
-  "name": "@koiyakiya/vite-coffee",
+  "name": "vite-coffee",
   "version": "1.0.0",
   "type": "module",
   "dependencies": {
