@@ -1,4 +1,4 @@
-name: Vite Cofeee Repository Actions
+name: build & publish vite-coffee
 
 on:
   push:
