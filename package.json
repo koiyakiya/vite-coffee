@@ -27,7 +27,7 @@
     "preview": "vite preview",
     "test": "exit 0"
   },
-  "name": "vite-coffee",
+  "name": "@koiyakiya/vite-coffee",
   "version": "1.0.0",
   "type": "module",
   "dependencies": {
