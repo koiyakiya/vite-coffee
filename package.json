@@ -28,7 +28,7 @@
     "test": "exit 0"
   },
   "name": "vite-coffee",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "type": "module",
   "dependencies": {
     "vue": "^3.4.33"
