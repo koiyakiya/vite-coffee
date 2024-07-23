@@ -1,8 +1,8 @@
 <template>
     <div class="kofi-button-wrapper">
-      <a :href="kofiURL" target="_blank" class="kofi-button">
-        <span class="kofi-icon">♥</span>
-        <span class="kofi-text">Support me on Ko-fi</span>
+      <a :href="kofiURL" target="_blank" class="kofi-button" :style="buttonStyle">
+        <img class="kofi-icon" src="../assets/kofilogo.png" :style="iconStyle" />
+        <span class="kofi-text" :style="textStyle">Support me on Ko-fi</span>
       </a>
     </div>
   </template>
@@ -18,36 +18,38 @@
       kofiURL() {
         return `https://ko-fi.com/${this.username}`;
       },
+      buttonStyle() {
+        return {
+          display: 'inline-flex',
+          alignItems: 'center',
+          backgroundColor: '#13233F',
+          color: 'white',
+          padding: '2px 12px',
+          borderRadius: '4px',
+          textDecoration: 'none',
+          fontFamily: '"Helvetica", "Arial", sans-serif',
+          fontSize: '13px',
+          fontWeight: '400',
+          lineHeight: '24px',
+        };
+      },
+      iconStyle() {
+        return {
+          width: '35px',
+          height: '35px',
+          marginRight: '8px',
+        };
+      },
+      textStyle() {
+        return {
+          color: 'white',
+        };
+      },
     },
   });
   </script>
   
   <style scoped>
-
-  .kofi-button {
-        display: 'inline-flex';
-        align-items: 'center';
-        background-color: '#13233F';
-        color: 'white';
-        padding: '2px 12px';
-        border-radius: '4px';
-        text-decoration: 'none';
-        font-family: '"Helvetica", "Arial", sans-serif';
-        font-size: '13px';
-        font-weight: '400';
-        line-height: '24px';
-  }
-
-  .kofi-icon {
-    font-size: 16px;
-    margin-right: 8px;
-    color: '#FF5E5B';
-  }
-
-  .kofi-text {
-    color: white;
-  }
-
   .kofi-button-wrapper :deep(.kofi-button) {
     all: initial;
     * {
