@@ -1,4 +1,5 @@
 declare module 'vite-coffee' {
-  const viteCoffee: any;
-  export default viteCoffee;
+  import { DefineComponent } from 'vue'
+  const Kofi: DefineComponent<{}, {}, any>
+  export { Kofi }
 }

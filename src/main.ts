@@ -1,1 +1,3 @@
-export { default as Kofi } from "./components/Kofi.vue";
+import Kofi from './components/Kofi.vue'
+
+export { Kofi }

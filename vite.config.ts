@@ -1,12 +1,13 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import path from 'path';
 
 export default defineConfig({
   plugins: [vue()],
   build: {
     lib: {
-      entry: 'src/main.ts',
-      name: 'Vite Coffee',
+      entry: path.resolve(__dirname, 'src/main.ts'),
+      name: 'ViteCoffee',
       fileName: (format) => `vite-coffee.${format}.js`
     },
     rollupOptions: {
@@ -17,5 +18,11 @@ export default defineConfig({
         }
       }
     },
+    outDir: 'dist',
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src')
+    }
   }
 });
