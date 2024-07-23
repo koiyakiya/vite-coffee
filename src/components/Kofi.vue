@@ -2,7 +2,9 @@
     <div class="kofi-button-wrapper">
       <a :href="kofiURL" target="_blank" class="kofi-button" :style="style" @mouseover="hover = true" @mouseleave="hover = false">
         <img class="kofi-icon" src="../assets/kofilogo.png" :style="imgStyle"/>
-        <span class="kofi-text">Support me on Ko-fi</span>
+        <span class="kofi-text">
+          {{ text }}
+        </span>
       </a>
     </div>
   </template>
@@ -13,6 +15,7 @@
   export default defineComponent({
     props: {
       username: { type: String, required: true },
+      text: { type: String, default: 'Support me on Ko-fi' },
       backgroundColor: { type: String, default: '#1A8ABE' },
       hoverBackgroundColor: { type: String, default: '#29ABE0' },
       textColor: { type: String, default: '#fff' },
