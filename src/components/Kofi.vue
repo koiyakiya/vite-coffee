@@ -1,6 +1,6 @@
 <template>
     <div class="kofi-button-wrapper">
-      <a :href="kofiURL" target="_blank" class="kofi-button" :style="style">
+      <a :href="kofiURL" target="_blank" class="kofi-button" :style="style" @mouseover="hover = true" @mouseleave="hover = false">
         <img class="kofi-icon" src="../assets/kofilogo.png" />
         <span class="kofi-text">Support me on Ko-fi</span>
       </a>
@@ -14,11 +14,19 @@
     props: {
       username: { type: String, required: true },
     },
-    setup(props) {
-        const kofiURL = `https://ko-fi.com/${props.username}`;
+    data() {
+      return {
+        hover: false
+      };
+    },
+    computed: {
+        kofiURL() {
+          return `https://ko-fi.com/${this.username}`;
+        },
     
-        const style = {
-            backgroundColor: '#29ABE0',
+        style() {
+          return {
+            backgroundColor: this.hover ? '#29ABE0' : '#1A8ABE',
             color: '#fff',
             padding: '10px 20px',
             borderRadius: '5px',
@@ -27,17 +35,8 @@
             justifyContent: 'center',
             textDecoration: 'none',
             cursor: 'pointer',
-        };
-    
-        const hoverStyle = {
-            backgroundColor: '#1A8ABE',
-        };
-    
-        return {
-            kofiURL,
-            style,
-            hoverStyle,
-        };
+          }
+        },
     },
   });
 </script>
