@@ -23,7 +23,7 @@
   </script>
   
   <style scoped>
-  .kofi-button-wrapper >>> .kofi-button {
+  .kofi-button-wrapper ::v-deep .kofi-button {
     display: inline-flex;
     align-items: center;
     background-color: #13233F;
@@ -37,13 +37,13 @@
     line-height: 24px;
   }
   
-  .kofi-button-wrapper >>> .kofi-icon {
+  .kofi-button-wrapper ::v-deep .kofi-icon {
     width: 35px;
     height: 35px;
     margin-right: 8px;
   }
   
-  .kofi-button-wrapper >>> .kofi-text {
+  .kofi-button-wrapper ::v-deep .kofi-text {
     color: white; 
   }
   
