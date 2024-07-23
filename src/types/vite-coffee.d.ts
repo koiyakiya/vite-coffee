@@ -1,6 +1,4 @@
 declare module 'vite-coffee' {
-
-    const content: any;
-    export default content;
-  }
-  
+  const viteCoffee: any;
+  export default viteCoffee;
+}

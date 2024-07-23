@@ -7,7 +7,8 @@
   "exports": {
     ".": {
       "import": "./dist/vite-coffee.es.js",
-      "require": "./dist/vite-coffee.umd.js"
+      "require": "./dist/vite-coffee.umd.js",
+      "types": "./dist/types/main.d.ts"
     }
   },
   "types": "./dist/types/main.d.ts",
@@ -28,7 +29,7 @@
     "test": "exit 0"
   },
   "name": "vite-coffee",
-  "version": "0.0.6-alpha",
+  "version": "0.0.7-alpha",
   "type": "module",
   "dependencies": {
     "vue": "^3.4.33"

@@ -18,10 +18,11 @@
     "skipLibCheck": true,
     "outDir": "./dist",
     "declaration": true,
+    "declarationDir": "./dist/types",
     "typeRoots": [
       "./src/types",
       "./node_modules/@types"
     ]
   },
-  "include": ["vite.config.*", "env.d.ts", "src/**/*", "src/**/*.vue"]
+  "include": ["vite.config.*", "env.d.ts", "src/**/*", "src/**/*.vue", "./src/types/**/*.d.ts"]
 }
