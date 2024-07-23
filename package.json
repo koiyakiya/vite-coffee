@@ -10,9 +10,9 @@
       "require": "./dist/vite-coffee.umd.js"
     }
   },
-  "types": "./dist/types/index.d.ts",
+  "types": "./dist/types/main.d.ts",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/@koiyakiya/"
+    "registry": "https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",
