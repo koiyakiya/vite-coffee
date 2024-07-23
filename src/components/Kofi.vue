@@ -23,7 +23,7 @@
   </script>
   
   <style scoped>
-  .kofi-button-wrapper ::v-deep .kofi-button {
+  .kofi-button-wrapper >>> .kofi-button {
     display: inline-flex;
     align-items: center;
     background-color: #13233F;
@@ -37,17 +37,17 @@
     line-height: 24px;
   }
   
-  .kofi-button-wrapper ::v-deep .kofi-icon {
+  .kofi-button-wrapper >>> .kofi-icon {
     width: 35px;
     height: 35px;
     margin-right: 8px;
   }
   
-  .kofi-button-wrapper ::v-deep .kofi-text {
+  .kofi-button-wrapper >>> .kofi-text {
     color: white; 
   }
   
-  .kofi-button-wrapper >>> .kofi-button:hover) {
+  .kofi-button-wrapper >>> .kofi-button:hover {
     background-color: #1e3a6a !important;
   }
   </style>
