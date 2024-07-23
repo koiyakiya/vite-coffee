@@ -14,41 +14,31 @@
     props: {
       username: { type: String, required: true },
     },
-    computed: {
-      kofiURL() {
-        return `https://ko-fi.com/${this.username}`;
-      },
+    setup(props) {
+        const kofiURL = `https://ko-fi.com/${props.username}`;
+    
+        const style = {
+            backgroundColor: '#29ABE0',
+            color: '#fff',
+            padding: '10px 20px',
+            borderRadius: '5px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textDecoration: 'none',
+            cursor: 'pointer',
+        };
+    
+        const hoverStyle = {
+            backgroundColor: '#1A8ABE',
+        };
+    
+        return {
+            kofiURL,
+            style,
+            hoverStyle,
+        };
     },
   });
-  </script>
-  
-  <style scoped>
-  .kofi-button-wrapper >>> .kofi-button {
-    display: inline-flex;
-    align-items: center;
-    background-color: #13233F;
-    color: white;
-    padding: 2px 12px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-family: "Helvetica", "Arial", sans-serif;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 24px;
-  }
-  
-  .kofi-button-wrapper >>> .kofi-icon {
-    width: 35px;
-    height: 35px;
-    margin-right: 8px;
-  }
-  
-  .kofi-button-wrapper >>> .kofi-text {
-    color: white; 
-  }
-  
-  .kofi-button-wrapper >>> .kofi-button:hover {
-    background-color: #1e3a6a !important;
-  }
-  </style>
+</script>
   
