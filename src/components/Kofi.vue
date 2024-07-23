@@ -1,7 +1,7 @@
 <template>
     <div class="kofi-button-wrapper">
       <a :href="kofiURL" target="_blank" class="kofi-button" :style="style" @mouseover="hover = true" @mouseleave="hover = false">
-        <img class="kofi-icon" src="../assets/kofilogo.png" />
+        <img class="kofi-icon" src="../assets/kofilogo.png" :style="imgStyle"/>
         <span class="kofi-text">Support me on Ko-fi</span>
       </a>
     </div>
@@ -28,15 +28,25 @@
           return {
             backgroundColor: this.hover ? '#29ABE0' : '#1A8ABE',
             color: '#fff',
-            padding: '10px 20px',
-            borderRadius: '5px',
+            padding: '10px',
+            borderRadius: '10px',
+            gap: '5px',
             display: 'flex',
+            width: '175px',
+            height: '20px',
             alignItems: 'center',
             justifyContent: 'center',
             textDecoration: 'none',
             cursor: 'pointer',
           }
         },
+        imgStyle() {
+          return {
+            width: '35px',
+            marginLeft: '-10px',
+            marginRight: '-5px',
+          }
+        }
     },
   });
 </script>
