@@ -23,31 +23,31 @@
   </script>
   
   <style scoped>
-  .kofi-button {
-    display: inline-flex !important;
-    align-items: center !important;
-    background-color: #13233F !important;
-    color: white !important;
-    padding: 2px 12px !important;
-    border-radius: 4px !important;
-    text-decoration: none !important;
-    font-family: "Helvetica", "Arial", sans-serif !important;
-    font-size: 13px !important;
-    font-weight: 400 !important;
-    line-height: 24px !important;
+  .kofi-button-wrapper >>> .kofi-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #13233F;
+    color: white;
+    padding: 2px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 24px;
   }
   
-  .kofi-icon {
-    width: 35px !important;
-    height: 35px !important;
-    margin-right: 8px !important;
+  .kofi-button-wrapper >>> .kofi-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 8px;
   }
   
-  .kofi-text {
-    color: white !important; 
+  .kofi-button-wrapper >>> .kofi-text {
+    color: white; 
   }
   
-  .kofi-button-wrapper :deep(.kofi-button:hover) {
+  .kofi-button-wrapper >>> .kofi-button:hover) {
     background-color: #1e3a6a !important;
   }
   </style>
