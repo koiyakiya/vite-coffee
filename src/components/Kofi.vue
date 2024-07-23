@@ -1,73 +1,56 @@
 <template>
-    <button class="kofi-btn" :style="style">
-        <a :href="kofiURL" target="_blank">
-            <img src="../assets/kofilogo.png" />
-            <span class="kofi-text">
-                Support me on Ko-fi
-            </span>
-        </a>
-    </button>
-</template>
-
-<script lang="ts">
-import {  defineComponent } from 'vue';
-
-export default /*#__PURE__*/ defineComponent({
+    <a :href="kofiURL" target="_blank" class="kofi-button">
+      <span class="kofi-icon">♥</span>
+      Support me on Ko-fi
+    </a>
+  </template>
+  
+  <script lang="ts">
+  import { defineComponent } from 'vue';
+  
+  export default defineComponent({
     props: {
-        username: { type: String, required: true },
-        backgroundColor: { type: String, default: '#F0F0F0'},
-        hoverColor: { type: String, default: '#D0D0D0'},
-        textColor: { type: String, default: '#000000'},
-        
+      username: { type: String, required: true },
     },
     computed: {
-        kofiURL() {
-            return `https://ko-fi.com/${this.username}`;
-        },
-        style() {
-            return {
-                '--bg-color': this.backgroundColor,
-                '--bg-hover-color': this.hoverColor,
-                '--text-color': this.textColor
-            };
-        }
+      kofiURL() {
+        return `https://ko-fi.com/${this.username}`;
+      },
     }
-})
-</script>
-
-<style scoped>
+  })
+  </script>
   
-    .kofi-btn {
-    display: inline-block;
-    border: none;
-    border-radius: 10px;
-    padding: 0;
-    cursor: pointer;
-    background-color: var(--bg-color);
-    transition: background-color 0.3s ease;
+  <style scoped>
+  .kofi-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #29abe0;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+    transition: background-color 0.2s ease;
   }
-
-  .kofi-btn a {
+  
+  .kofi-button:hover {
+    background-color: #2795c4;
+  }
+  
+  .kofi-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 8px;
     display: flex;
     align-items: center;
-    padding: 3px 5px;
-    text-decoration: none;
+    justify-content: center;
+    font-size: 14px;
+    color: #ff5e5b;
   }
-
-  .kofi-btn img {
-    height: 35px;
-  }
-
-  .kofi-text {
-    font-family: Arial, sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-    margin-right: 10px;
-    color: var(--text-color);
-  }
-
-  .kofi-btn:hover {
-    background-color: var(--bg-hover-color)
-  }
-  
-</style>
+  </style>
