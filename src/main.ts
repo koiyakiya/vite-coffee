@@ -1,1 +1,1 @@
-export { default as Kofi } from "./components/Kofi.vue";
+export { default as KofiButton } from "./components/Kofi.vue";
