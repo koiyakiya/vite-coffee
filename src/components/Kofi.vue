@@ -1,6 +1,6 @@
 <template>
     <div class="kofi-button-wrapper">
-      <a :href="kofiURL" target="_blank" class="kofi-button">
+      <a :href="kofiURL" target="_blank" class="kofi-button" :style="style">
         <img class="kofi-icon" src="../assets/kofilogo.png" />
         <span class="kofi-text">Support me on Ko-fi</span>
       </a>
