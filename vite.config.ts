@@ -1,33 +1,21 @@
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import path from "path";
-
-import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
-  plugins: [vue(), cssInjectedByJsPlugin()],
-  resolve: {
-    alias: {
-      "@/": new URL("./src/", import.meta.url).pathname,
-    },
-  },
-
+  plugins: [vue()],
   build: {
-    cssCodeSplit: true,
-    target: "esnext",
     lib: {
-      entry: path.resolve(__dirname, "src/main.ts"),
-      name: "Vite Coffee",
-      fileName: (format) => `vite-coffee.${format}.js`,
+      entry: 'src/main.ts',
+      name: 'Vite Coffee',
+      fileName: (format) => `vite-coffee.${format}.js`
     },
-
     rollupOptions: {
-      external: ["vue"],
+      external: ['vue'],
       output: {
         globals: {
-          vue: "Vue",
-        },
-      },
-    },
-  },
+          vue: 'Vue'
+        }
+      }
+    }
+  }
 });
