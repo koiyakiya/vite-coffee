@@ -37,36 +37,37 @@ export default /*#__PURE__*/ defineComponent({
 
 <style scoped>
   
-  .kofi-btn {
-  display: inline-block;
-  border: none;
-  border-radius: 10px;
-  padding: 0;
-  cursor: pointer;
-  background-color: var(--bg-color);
-  transition: background-color 0.3s ease;
-}
+    .kofi-btn {
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    padding: 0;
+    cursor: pointer;
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease;
+  }
 
-.kofi-btn a {
-  display: flex;
-  align-items: center;
-  padding: 3px 5px;
-  text-decoration: none;
-}
+  .kofi-btn a {
+    display: flex;
+    align-items: center;
+    padding: 3px 5px;
+    text-decoration: none;
+  }
 
-.kofi-btn img {
-  height: 35px;
-}
+  .kofi-btn img {
+    height: 35px;
+  }
 
-.kofi-text {
-  font-family: Arial, sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  margin-right: 10px;
-  color: var(--text-color);
-}
+  .kofi-text {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: var(--text-color);
+  }
 
-.kofi-btn:hover {
-  background-color: var(--bg-hover-color)
-}
+  .kofi-btn:hover {
+    background-color: var(--bg-hover-color)
+  }
+  
 </style>
