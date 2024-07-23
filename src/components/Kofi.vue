@@ -1,8 +1,10 @@
 <template>
-    <a :href="kofiURL" target="_blank" class="kofi-button">
-      <span class="kofi-icon">♥</span>
-      Support me on Ko-fi
-    </a>
+    <div class="kofi-button-wrapper">
+      <a :href="kofiURL" target="_blank" class="kofi-button" :style="buttonStyle">
+        <span class="kofi-icon" :style="iconStyle">♥</span>
+        <span class="kofi-text" :style="textStyle">Support me on Ko-fi</span>
+      </a>
+    </div>
   </template>
   
   <script lang="ts">
@@ -16,41 +18,46 @@
       kofiURL() {
         return `https://ko-fi.com/${this.username}`;
       },
-    }
-  })
+      buttonStyle() {
+        return {
+          display: 'inline-flex',
+          alignItems: 'center',
+          backgroundColor: '#13233F',
+          color: 'white',
+          padding: '2px 12px',
+          borderRadius: '4px',
+          textDecoration: 'none',
+          fontFamily: '"Helvetica", "Arial", sans-serif',
+          fontSize: '13px',
+          fontWeight: '400',
+          lineHeight: '24px',
+        };
+      },
+      iconStyle() {
+        return {
+          fontSize: '16px',
+          marginRight: '8px',
+          color: '#FF5E5B',
+        };
+      },
+      textStyle() {
+        return {
+          color: 'white',
+        };
+      },
+    },
+  });
   </script>
   
   <style scoped>
-  .kofi-button {
-    display: inline-flex;
-    align-items: center;
-    background-color: #29abe0;
-    color: white;
-    padding: 5px 12px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-family: 'Helvetica', 'Arial', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 1;
-    transition: background-color 0.2s ease;
+  .kofi-button-wrapper :deep(.kofi-button) {
+    all: initial;
+    * {
+      all: unset;
+    }
   }
   
-  .kofi-button:hover {
-    background-color: #2795c4;
-  }
-  
-  .kofi-icon {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border-radius: 50%;
-    margin-right: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    color: #ff5e5b;
+  .kofi-button-wrapper :deep(.kofi-button:hover) {
+    background-color: #1e3a6a !important;
   }
   </style>
